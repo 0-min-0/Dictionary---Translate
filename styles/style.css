@@ -1,0 +1,146 @@
+:root {
+    --violette: #f0e9fa;
+    --purple-gray: #C0BCE0;
+    --lila: #a84dc7;
+    --sky-blue: #A5E1F5;
+}
+
+@font-face {
+    font-family: 'translate-server-font';
+    src: url(../assets/fonts/Righteous/Righteous-Regular.ttf) format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'second-font';
+    src: url(../assets/fonts/Parkinsans/Parkinsans-VariableFont_wght.ttf);
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--violette);
+}
+
+.mainContainer {
+    width: 90%;
+    height: 90%;
+    border-radius: 12px;
+    background-color: var(--violette);
+}
+
+header {
+    width: 100%;
+    height: 25%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    font-family: 'translate-server-font', sans-serif;
+    box-shadow: 10px 10px 10px 1px var(--purple-gray);
+    margin: 0 0 2rem 0;
+}
+
+header > h1 {
+    color: var(--lila);
+    font-size: 3rem;
+    margin: 1.2rem;
+}
+
+header > nav > ul > li {
+    list-style: none;
+}
+
+header > nav > ul > li > a {
+    color: #a84dc7;
+    background-color: #fff;
+    border: solid 4px var(--lila);
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 1.6rem;
+    margin: 1rem;
+    padding: 0.3rem 1rem;
+    transition: 0.3s ease;
+}
+
+header > nav > ul > li > a:hover {
+    transform: scale(1.1);
+    color: #fff;
+    background-color: var(--lila);
+}
+
+#color {
+    color: #fff;
+    background-color: #a84dc7;
+}
+
+aside {
+    width: 100%;
+    height: 75%;
+    font-family: 'second-font';
+    background-color: #fff;
+    box-shadow: 10px 10px 10px 1px var(--purple-gray);
+    border-radius: 15px;
+}
+
+aside > form {
+    width: 50%;
+    height: 75%;
+    padding: 4rem;
+}
+
+aside > form > fieldset {
+    border: none; 
+    width: 100%;
+    height: 100%;
+}
+
+.secondFieldset {
+    display: flex;
+    flex-direction: column;
+}
+
+aside > form > fieldset > label {
+    cursor: pointer;
+    font-size: 1.8rem;
+    margin-right: 2rem;
+    transition: color 0.3s
+}
+
+input[type="radio"]:checked {
+    background-color: var(--purple-gray);
+    border-color: #fff;
+}
+
+aside > form > fieldset > input {
+    width: 100%;
+    height: 100%;
+    padding: 1.2rem 1.2rem 15rem 1.2rem;
+    margin: 1.2rem 0;
+    border: solid 3px var(--purple-gray);
+    border-radius: 10px;
+    background-color: var(--purple-gray);
+}
+
+aside > form > .secondFieldset > button {
+    color: #fff;
+    background-color: var(--lila);
+    padding: 1rem 0;
+    border: none;
+    font-size: 1rem;
+}
+
+
