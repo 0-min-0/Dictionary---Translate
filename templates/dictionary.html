@@ -3,10 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dictionary & Categories</title>
-    <link rel="stylesheet" href="/styles/style.css">
+    <title>English - Spanish Translate</title>
+    <link rel="stylesheet" href="../styles/style2.css">
 </head>
 <body>
-    
+    <div class="mainContainer" id="mainContainer">
+        <header>
+            <h1>English/Spanish Translate</h1>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="../index.html" id="color">Translate</a>
+                        <a href="../templates/dictionary.html">Dictionary</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <aside>
+            <button id="showAllResults">Show All Results</button>
+            <select id="categorySelect">
+                <option value="">Select a category</option>
+                <option value="fruits">Fruits</option>
+                <option value="things">Things</option>
+                <option value="animals">Animals</option>
+                <option value="places">Places</option>
+                <option value="transport">Transport</option>
+                <option value="nature">Nature</option>
+                <option value="people">People</option>
+            </select>
+            <div class="tableContainer hidden">
+                <table id="vocabularyTable">
+                    <thead>
+                        <tr>
+                            <th>Word</th>
+                            <th>Translation</th>
+                            <th>Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Vocabulary rows will be inserted here -->
+                    </tbody>
+                </table>
+            </div>
+        </aside>
+        <div class="footerContainer">
+            <footer>
+                <p>Created by <strong>Jasmin & Harrison</strong></p>
+            </footer>
+        </div>
+    </div>
+    <script src="../scripts/vocabulary.js"></script>
+    <script src="../scripts/dictionary.js"></script>
 </body>
 </html>
