@@ -20,24 +20,35 @@
             </nav>
         </header>
         <aside>
-            <button id="showAllResults">Show All Results</button>
-            <select id="categorySelect">
-                <option value="">Select a category</option>
-                <option value="fruits">Fruits</option>
-                <option value="things">Things</option>
-                <option value="animals">Animals</option>
-                <option value="places">Places</option>
-                <option value="transport">Transport</option>
-                <option value="nature">Nature</option>
-                <option value="people">People</option>
-            </select>
-            <div class="tableContainer hidden">
+            <div class="formContainer">
+                <div class="categorySelectContainer">
+                    <label for="categorySelect">Select a category:</label>
+                    <select id="categorySelect">
+                        <option value="">Select a category</option>
+                        <option value="animals">Animals</option>
+                        <option value="fruits">Fruits</option>
+                        <option value="colors">Colors</option>
+                        <option value="physical_descriptions">Physical Descriptions</option>
+                        <option value="skills">Skills</option>
+                        <option value="verbs">Verbs</option>
+                    </select>
+                </div>
+                <form id="addWordForm" class="addWordForm">
+                    <input type="text" id="newWord" placeholder="English Word" required>
+                    <input type="text" id="newTranslation" placeholder="Spanish Translation" required>
+                    <input type="text" id="newExample" placeholder="Example Sentence" required>
+                    <input type="text" id="newExampleSpanish" placeholder="Example Sentence in Spanish" required>
+                    <button type="submit">Add Word</button>
+                </form>
+            </div>
+            <div class="tableContainer">
                 <table id="vocabularyTable">
                     <thead>
                         <tr>
                             <th>Word</th>
                             <th>Translation</th>
                             <th>Example</th>
+                            <th>Example in Spanish</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -52,7 +63,7 @@
             </footer>
         </div>
     </div>
-    <script src="../scripts/vocabulary.js"></script>
+    <script src="../scripts/vocabularyData.js"></script>
     <script src="../scripts/dictionary.js"></script>
 </body>
 </html>
