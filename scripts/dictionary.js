@@ -1,3 +1,5 @@
+import { dictionary } from './vocabularyData.js';
+
 document.addEventListener('DOMContentLoaded', () => {
     const categorySelect = document.getElementById('categorySelect');
     const vocabularyTableBody = document.getElementById('vocabularyTable').getElementsByTagName('tbody')[0];
@@ -41,14 +43,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const displayVocabulary = (category) => {
         vocabularyTableBody.innerHTML = ''; // Clear existing rows
-        if (category) {
-            if (dictionary.categories[category]) {
-                dictionary.categories[category].forEach(item => {
-                    addRow(item);
-                });
-            }
-        } else {
-            // Display all words if no category is selected
+        if (category && dictionary.categories[category]) {
+            dictionary.categories[category].forEach(item => {
+                addRow(item);
+            });
+        } else if (!category) {
             for (const category in dictionary.categories) {
                 dictionary.categories[category].forEach(item => {
                     addRow(item);
