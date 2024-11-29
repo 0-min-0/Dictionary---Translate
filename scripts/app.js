@@ -20,20 +20,20 @@ const resultSection = (words) => {
     translateContainer.id = 'wordTranslate'
 
     const wordTranslate = document.createElement('h2')
-    wordTranslate.textContent = words.example
+    wordTranslate.textContent = words.word
 
     const englishExample = document.createElement('h3')
     englishExample.textContent = `Example: ${words.example}`
 
     const spanishExample = document.createElement('h4')
-    spanishExample.textContent = `${words.example_spanish || 'No disponible'}`
+    spanishExample.textContent = `${words.translateExample || 'No disponible'}`
 
     const imgContainer = document.createElement('div')
     imgContainer.classList.add('exampleImg')
     imgContainer.id = 'exampleImg'
 
     const imgExample = document.createElement('img')
-    imgExample.src = words.img_example || 'assets/images/no-image.png'
+    imgExample.src = words.image || 'assets/images/no-image.png'
     imgExample.alt = words.example
 
     imgContainer.appendChild(imgExample)
