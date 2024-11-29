@@ -9,6 +9,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const newExampleInput = document.getElementById('newExample');
     const newExampleSpanishInput = document.getElementById('newExampleSpanish');
 
+   
+    if (localStorage.getItem('dictionary')) {
+        Object.assign(dictionary, JSON.parse(localStorage.getItem('dictionary')));
+    } else {
+        
+        dictionary.categories = dictionary.categories || {};
+    }
+
     categorySelect.addEventListener('change', () => {
         const selectedCategory = categorySelect.value;
         displayVocabulary(selectedCategory);
@@ -30,10 +38,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 example_spanish: newExampleSpanish
             };
 
+            
             if (!dictionary.categories[selectedCategory]) {
                 dictionary.categories[selectedCategory] = [];
             }
+
+            
             dictionary.categories[selectedCategory].push(newItem);
+
+            
+            localStorage.setItem('dictionary', JSON.stringify(dictionary));
+
+            
             addRow(newItem);
             addWordForm.reset();
         } else {
@@ -48,6 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 addRow(item);
             });
         } else if (!category) {
+            
             for (const category in dictionary.categories) {
                 dictionary.categories[category].forEach(item => {
                     addRow(item);
