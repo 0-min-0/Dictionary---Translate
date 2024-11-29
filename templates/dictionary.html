@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>English - Spanish Translate</title>
-    <link rel="stylesheet" href="../styles/style2.css">
+    <link rel="stylesheet" href="../styles/dictionary.css">
 </head>
 <body>
     <div class="mainContainer" id="mainContainer">
@@ -13,8 +13,8 @@
             <nav>
                 <ul>
                     <li>
-                        <a href="../index.html" id="color">Translate</a>
-                        <a href="../templates/dictionary.html">Dictionary</a>
+                        <a href="../index.html">Translate</a>
+                        <a href="../templates/dictionary.html" id="color">Dictionary</a>
                     </li>
                 </ul>
             </nav>
@@ -22,7 +22,6 @@
         <aside>
             <div class="formContainer">
                 <div class="categorySelectContainer">
-                    <label for="categorySelect">Select a category:</label>
                     <select id="categorySelect">
                         <option value="">Select a category</option>
                         <option value="animals">Animals</option>
@@ -52,18 +51,15 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <!-- Vocabulary rows will be inserted here -->
                     </tbody>
                 </table>
             </div>
         </aside>
-        <div class="footerContainer">
-            <footer>
-                <p>Created by <strong>Jasmin & Harrison</strong></p>
-            </footer>
-        </div>
+        <footer>
+            <p>Created by <strong>Jasmin & Harrison</strong></p>
+        </footer>
     </div>
-    <script src="../scripts/vocabularyData.js"></script>
-    <script src="../scripts/dictionary.js"></script>
+    <script type="module" src="../scripts/vocabularyData.js"></script>
+    <script type="module" src="../scripts/dictionary.js"></script>
 </body>
 </html>

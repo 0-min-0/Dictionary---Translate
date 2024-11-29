@@ -1,7 +1,8 @@
 :root {
-    --violette: #f0e9fa;
-    --purple-gray: #C0BCE0;
-    --lila: #a84dc7;
+    --violette: #d2c7e2;
+    --purple-gray: #f1efff;
+    --soft-purple: #ab9aca;
+    --lila: #a84dc7; 
     --sky-blue: #A5E1F5;
 }
 
@@ -50,7 +51,7 @@ header {
     align-items: center;
     background-color: #fff;
     font-family: 'translate-server-font', sans-serif;
-    box-shadow: 10px 10px 10px 1px var(--purple-gray);
+    box-shadow: 10px 10px 10px 1px var(--soft-purple);
     margin: 0 0 2rem 0;
 }
 
@@ -88,12 +89,13 @@ header > nav > ul > li > a:hover {
 }
 
 aside {
+    display: flex;
     width: 100%;
     height: 75%;
     font-family: 'second-font';
     background-color: #fff;
-    box-shadow: 10px 10px 10px 1px var(--purple-gray);
-    border-radius: 15px;
+    box-shadow: 10px 10px 10px 1px var(--soft-purple);
+    border-radius: 15px 15px 0 0;
 }
 
 aside > form {
@@ -128,11 +130,17 @@ input[type="radio"]:checked {
 aside > form > fieldset > input {
     width: 100%;
     height: 100%;
+    color: #000;
+    font-size: 2.5rem;
+    font-family: 'second-font';
     padding: 1.2rem 1.2rem 15rem 1.2rem;
-    margin: 1.2rem 0;
+    margin: 1.4rem 0;
     border: solid 3px var(--purple-gray);
     border-radius: 10px;
     background-color: var(--purple-gray);
+    outline: none;
+    caret-color: var(--lila);
+    
 }
 
 aside > form > .secondFieldset > button {
@@ -140,7 +148,60 @@ aside > form > .secondFieldset > button {
     background-color: var(--lila);
     padding: 1rem 0;
     border: none;
-    font-size: 1rem;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    font-family: 'second-font';
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
+aside > form > .secondFieldset > button:hover {
+    transform: scale(1.05);
+}
 
+.wordTranslate {
+    padding: 4rem;
+}
+
+.wordTranslate > h2 {
+    color: var(--lila);
+    font-size: 2.8rem;
+    margin: 0 0 0.8rem 0;
+}
+
+.wordTranslate > h3 {
+    font-size: 1.5rem;
+    margin: 0 0 0.6rem 0;
+}
+
+.wordTranslate > h4 {
+    color: #575757;
+    font-size: 1.3rem;
+    font-style: italic;
+    margin: 0 0 0.8rem 0;
+}
+
+.exampleImg {
+    margin: 2rem 0 0 0;
+}
+
+.exampleImg > img {
+    width: 22rem;
+    height: 16rem;
+    border: double 10px var(--lila);
+    border-radius: 10px;
+    cursor: not-allowed;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--lila);
+    font-size: 1.1rem;
+    font-family: 'second-font';
+    padding: 3rem;
+    background-color: var(--purple-gray);
+    box-shadow: 10px 10px 10px 1px var(--soft-purple);
+}

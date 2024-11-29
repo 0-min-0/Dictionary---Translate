@@ -20,11 +20,11 @@
         </nav>
     </header>
     <main>
-        <aside>
-            <form action="translateForm">
+        <aside id="translateAside">
+            <form action="">
                 <fieldset class="firstFieldset">
-                    <label><input type="radio" name="languaje" id="englishLang">English</label>
-                    <label><input type="radio" name="languaje" id="spanishLang">Spanish</label>
+                    <label><input type="radio" name="languaje" id="englishLang" value="english">English</label>
+                    <label><input type="radio" name="languaje" id="spanishLang" value="spanish">Spanish</label>
                 </fieldset>
                 <fieldset class="secondFieldset">
                     <input type="text" name="translate" id="translate" placeholder="Write the word to translate..." required>
@@ -32,10 +32,11 @@
                 </fieldset>
             </form>
             <section class="wordTranslate" id="wordTranslate">
-                <h2>Palabra</h2>
-                <h3>Example: <br> 'We can write a book with a lot words.'</h3>
+                <h2 id="translationSec">...</h2>
+                <h3>Example: <br>There isn't nothing yet.</h3>
+                <h4>Aún no hay traducciones.</h4>
                 <div class="exampleImg" id="exampleImg">
-                    <img src="assets/images/book.png" alt="">
+                    <img src="assets/images/no-image.png" alt="">
                 </div>
             </section>   
         </aside>
@@ -44,5 +45,7 @@
         <p>Create by <strong>Jasmin & Harrison</strong></p>
     </footer>
 </div>
+<script type="module" src="scripts/app.js"></script>
+<script type="module" src="scripts/vocabulary.js"></script>
 </body>
 </html>
