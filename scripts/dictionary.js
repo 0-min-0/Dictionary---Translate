@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
     const categorySelect = document.getElementById('categorySelect');
     const vocabularyTableBody = document.getElementById('vocabularyTable').getElementsByTagName('tbody')[0];
     const addWordForm = document.getElementById('addWordForm');
@@ -7,12 +7,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const newExampleInput = document.getElementById('newExample');
     const newExampleSpanishInput = document.getElementById('newExampleSpanish');
 
-    categorySelect.addEventListener('change', function() {
+    categorySelect.addEventListener('change', () => {
         const selectedCategory = categorySelect.value;
         displayVocabulary(selectedCategory);
     });
 
-    addWordForm.addEventListener('submit', function(event) {
+    addWordForm.addEventListener('submit', (event) => {
         event.preventDefault();
         const newWord = newWordInput.value.trim();
         const newTranslation = newTranslationInput.value.trim();
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    function displayVocabulary(category) {
+    const displayVocabulary = (category) => {
         vocabularyTableBody.innerHTML = ''; // Clear existing rows
         if (category) {
             if (dictionary.categories[category]) {
@@ -55,9 +55,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             }
         }
-    }
+    };
 
-    function addRow(item) {
+    const addRow = (item) => {
         const row = document.createElement('tr');
 
         const wordCell = document.createElement('td');
@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
         row.appendChild(exampleSpanishCell);
 
         vocabularyTableBody.appendChild(row);
-    }
+    };
 
     // Display all words on initial load
     displayVocabulary('');
